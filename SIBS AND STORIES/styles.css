@@ -1,0 +1,182 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Resetting the default style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Body styling*/
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(90deg, #d3b75a, #dfddb6, #fdfdff);
+  animation: gradientMove 10s infinite alternate-reverse;
+  color: #490707;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* Header styling */
+header {
+  background: #926d3dfc;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* Nav section styling*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/*logo styling*/
+.logo img {
+  height: 250px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* Navigation Links Styling*/
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #141313;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: #e0e0e0;
+  color: #864242;
+  transform: scale(1.1);
+}
+
+/* Hero section Styling */
+.hero {
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #26071192;
+  text-shadow: 2px 2px 10px rgba(77, 36, 49, 0.7);
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* Pulsing Button */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #926d3dfc;
+  color: white;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px #85797d;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px #e1e1e1;
+  }
+  50% {
+    box-shadow: 0 0 25px #c9c1c4, 0 0 50px #e8d2d9;
+  }
+  100% {
+    box-shadow: 0 0 15px #ebdbe0;
+  }
+}
+
+/* Floating Image  */
+.hero-image {
+  flex: 1;
+  max-width: 3000px; 
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: floatImage 5s infinite ease-in-out;
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+}}
+
+/*Footer styling*/
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ddd;
+  font-size: 0.9rem;
+  backdrop-filter: blur(5px);
+  transition: background 0.3s ease;
+}
+
+/* Hover effect for footer */
+footer:hover {
+  background: rgb(255, 255, 255);
+}
+
+
+
+
