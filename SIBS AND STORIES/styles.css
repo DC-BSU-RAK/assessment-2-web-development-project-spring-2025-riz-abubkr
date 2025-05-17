@@ -44,7 +44,7 @@ nav {
 }
 /*logo styling*/
 .logo img {
-  height: 250px;
+  height: 200px;
   transition: transform 0.3s ease;
 }
 
@@ -60,7 +60,7 @@ nav {
 }
 
 .nav-links a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #141313;
   font-weight: 600;
   font-size: 1.2rem;
@@ -77,12 +77,12 @@ nav {
 
 /* Hero section Styling */
 .hero {
-  padding: 100px 20px;
+  padding: 100px 35px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
+/*Styling the contents*/
 .hero-content {
   max-width: 1200px;
   display: flex;
@@ -91,7 +91,7 @@ nav {
   gap: 50px;
   justify-content: space-between;
 }
-
+/*styling the text*/
 .hero-text {
   flex: 1;
   min-width: 280px;
@@ -125,6 +125,7 @@ nav {
   animation: pulse 2s infinite;
 }
 
+/*Styling pulsing button*/
 @keyframes pulse {
   0% {
     box-shadow: 0 0 15px #e1e1e1;
@@ -149,7 +150,7 @@ nav {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   animation: floatImage 5s infinite ease-in-out;
 }
-
+/*Animation for float image*/
 @keyframes floatImage {
   0% {
     transform: translateY(0);
@@ -161,22 +162,490 @@ nav {
     transform: translateY(0);
 }}
 
-/*Footer styling*/
+/* About Section Styling */
+.about-container {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 35px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 14px;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Entry Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Headings */
+h1, h2 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+h1:hover, h2:hover {
+  color: #007BFF;
+}
+
+/* Content Layout */
+.about-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+/* Text Section */
+.about-text {
+  width: 55%;
+  animation: fadeInLeft 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.about-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* List Styling */
+.about-text ul {
+  padding-left: 25px;
+}
+/*about section styling*/
+.about-text li {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #444;
+  position: relative;
+  padding-left: 12px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+/*about section listiing styling*/
+.about-text li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007BFF;
+  font-size: 20px;
+  top: 1px;
+}
+/*hover effect for the listing*/
+.about-text li:hover {
+  transform: translateX(6px);
+  color: #007BFF;
+}
+
+/* Image Section */
+.about-image {
+  width: 40%;
+  animation: fadeInRight 1s ease forwards;
+}
+/* animation*/
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Product Section */
+.products {
+  text-align: center;
+  padding: 60px 20px;
+}
+/*Styling headings of products*/
+.products h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #490707;
+  margin-bottom: 20px;
+}
+
+/*Styling the list of products*/
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+/*styling the list */
+.product-item {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 270px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/*stylig indiviual products*/
+.product-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+/*styling image of the products*/
+.product-item img {
+  width: 100%;
+  border-radius: 10px;
+}
+/*styling the title*/
+.product-item h2 {
+  font-size: 1.8rem;
+  color: #864242;
+  margin: 15px 0;
+}
+/*styling the paragraph*/
+.product-item p {
+  font-size: 1rem;
+  color: #333;
+}
+/*styling the button*/
+.buy-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #926d3dfc;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+/*hover effect for the button*/
+.buy-btn:hover {
+  background: #864242;
+  transform: scale(1.1);
+}
+/*login and signup section*/
+.login-signup {
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+/*Styling the heading*/
+h1 {
+  color: #d2691e;
+}
+
+.form-container {
+  display: flex;
+justify-content: space-around;
+}
+/* styling the form*/
+form {
+  width: 45%;
+  text-align: left;
+}
+/*styling the title*/
+h2 {
+  color: #d2691e;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* styling the input section*/
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/*styling the button*/
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #d2691e;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/*hover effect for the button*/
+button:hover {
+  background-color: #b5581b;
+}
+
+
+/* Contact Section Styling */
+.contact-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1s ease-in-out;
+}
+/*styling the headings*/
+.contact-container h1,
+.contact-container h2 {
+  color: #926d3dfc;
+  margin-bottom: 15px;
+}
+/*styling the info section*/
+.contact-info {
+  margin-bottom: 30px;
+}
+/*styling the info text */
+.contact-info p,
+.contact-info a {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+/*styling the list of contact info and adding hover effects*/
+.contact-info a {
+  color: #457b9d;
+  text-decoration: none;
+  font-weight: 500;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+  color: #926d3dfc;
+}
+
+.note {
+  font-style: italic;
+  color: #555;
+  margin-top: 10px;
+}
+/* Form container layout*/
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+/*Common styling for all inputs and the text area*/
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #926d3dfc;
+  box-shadow: 0 0 8px rgba(146, 109, 61, 0.4);
+  outline: none;
+}
+/*styling the contact form button*/
+.contact-form button {
+  background-color: #926d3dfc;
+  color: white;
+  padding: 14px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button:hover {
+  background-color: #864242;
+  transform: scale(1.03);
+}
+
+/* Simple fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hamper Info Styling */
+.hamper-info {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 3rem;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.hamper-info section {
+  margin-bottom: 3rem;
+}
+/*heading styling*/
+.hamper-info h1,
+.hamper-info h2 {
+  color: #d2691e;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+/*text styling*/
+.hamper-info p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+}
+/*styling the list*/
+.hamper-info ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.hamper-info ul li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+.hamper-info ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #926d3d;
+  font-weight: bold;
+}
+
+/* Video Section */
+.video-section h2 {
+  font-size: 1.5rem;
+  color: #4b2e2e;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  margin: 0 auto;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/*checkout section*/
+
+.checkout-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.total {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-top: 20px;
+}
+/*place order section styling */
+.place-order {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.place-order:hover {
+  background-color: #218838;
+}
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #ddd;
-  font-size: 0.9rem;
-  backdrop-filter: blur(5px);
-  transition: background 0.3s ease;
+  padding: 10px;
+  background-color: #d2691e;
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
-
-/* Hover effect for footer */
-footer:hover {
-  background: rgb(255, 255, 255);
-}
-
-
-
-

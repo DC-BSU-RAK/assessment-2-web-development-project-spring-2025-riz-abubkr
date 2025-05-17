@@ -4,43 +4,158 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Sibs and Stories - Home</title>
+  <!--Linking with css and java-->
   <link rel="stylesheet" href="styles.css" />
 </head>
+<!--Header section-->
 <body>
   <header>
     <nav>
+      <!--Logo of the website-->
       <div class="logo">
         <img src="Images/Logo.jpg" alt="Sibs and Stories Logo" />
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
-        <li><a href="combos.html">Gift Combos</a></li>
+        <li><a href="contact.html">Contact us</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="login.html">Login/Signup</a></li>
+        <li><a href="hampers.html">Hampers</a></li>
+        <li><a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <div class="hero-text">
-          <h1>Welcome to Sibs and Stories</h1>
-          <p>Explore our exclusive hampers, the perfect gifts for any occasion!</p>
-          <a href="products.html" class="cta-btn">Shop Now</a>
-        </div>
-        <div class="hero-image">
-          <img src="Images/Customized box.jpg" alt="Gift Hampers" />
-        </div>
+  <!--Hamper details-->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Welcome to Sibs and Stories</h1>
+        <p>Explore our exclusive hampers, the perfect gifts for any occasion!</p>
+        <!--Adding the shop now button-->
+        <a href="products.html" class="cta-btn">Shop Now</a>
       </div>
+      <!--Adding the hero image-->
+      <div class="hero-image">
+        <img src="Images/Customized box.jpg" alt="Gift Hampers" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Section -->
+  <section class="products">
+    <h1>Our Exclusive Hampers</h1>
+    <div class="product-list">
+      <div class="product-item">
+        <img src="Images/Buldak bouquet.jpg" alt="Flaming Hot Treats" />
+        <h2>Flaming Hot Treats</h2>
+        <p> The Perfect Spicy Snack Bouquet!</p>
+        <a href="#" class="buy-btn" data-name="Flaming Hot Treats" data-price="19.99">Buy Now</a>
+      </div>
+
+      <div class="product-item">
+        <img src="Images/Hamper box.jpg" alt="Personalized Hamper" />
+        <h2>Personalized Hamper</h2>
+        <p>Customize your gift with special items and a heartfelt message.</p>
+        <a href="#" class="buy-btn" data-name="Personalized Hamper" data-price="29.99">Buy Now</a>
+      </div>
+
+      <div class="product-item">
+        <img src="Images/Office flower.jpg" alt="Elegant Office Blooms" />
+        <h2>Elegant Office Blooms</h2>
+        <p>Fresh Floral Arrangements to Brighten Your Workspace</p>
+        <a href="#" class="buy-btn" data-name="Elegant Office Blooms" data-price="24.99">Buy Now</a>
+      </div>
+
+      <div class="product-item">
+        <img src="Images/Rose bouquet.jpg" alt="Flower bouquets" />
+        <h2>Flower bouquets</h2>
+        <p> Graceful Bouquets for Your Loved Ones</p>
+        <a href="#" class="buy-btn" data-name="Flower Bouquets" data-price="14.99">Buy Now</a>
+      </div>
+
+      <div class="product-item">
+        <img src="Images/birthday hampers.jpg" alt="Birthday hampers"/>
+        <h2>Birthday hampers</h2>
+        <P> Premium Birthday Gift Hampers</P>
+        <a href="#" class="buy-btn" data-name="Birthday Hampers" data-price="34.99">Buy Now</a>
+      </div>
+
+      <div class ="product-item">
+        <img src="Images/Nuts hamper.jpg" alt="Nuts Hamper"/>
+        <h2>Nuts Hamper</h2>
+        <p>Healthy & Gourmet Gift Packs</p>
+        <a href="#" class="buy-btn" data-name="Nuts Hamper" data-price="22.99">Buy Now</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="hamper-info">
+    <section class="hamper-intro">
+      <h1>Why Choose Sibs and Stories for Your Gift Hampers?</h1>
+      <p>
+        Finding the perfect gift has never been easier with our beautifully curated hampers. 
+        Whether you’re celebrating a birthday, anniversary, or just want to show someone you care, 
+        our gift hampers are designed to impress with premium treats, heartfelt touches, and memorable packaging.
+      </p>
     </section>
+
+    <section class="hamper-types">
+      <h2>Explore Our Hampers & Gift Sets</h2>
+      <ul>
+        <li><strong>Luxury Hampers:</strong> Featuring gourmet snacks, chocolates, and scented items for a lavish feel.</li>
+        <li><strong>Personalized Gift Boxes:</strong> Add your own message or mix of items to create a unique gift.</li>
+        <li><strong>Corporate Hampers:</strong> Impress clients or coworkers with elegant, branded gifting solutions.</li>
+        <li><strong>Festive Hampers:</strong> Ideal for Eid, Christmas, Diwali, and seasonal celebrations.</li>
+      </ul>
+    </section>
+
+    <section class="ordering-info">
+      <h2>How to Order a Gift Hamper</h2>
+      <p>
+        Simply browse our collection, select your desired hamper, add any custom notes, and choose a delivery date. 
+        We ensure a smooth and reliable delivery experience across the region.
+      </p>
+    </section>
+
+    <section class="occasions">
+      <h2>Perfect for Every Occasion</h2>
+      <p>
+        From romantic surprises and birthdays to corporate appreciation and festive holidays, 
+        our hampers suit every special moment. Let Sibs and Stories help you make it unforgettable.
+      </p>
+    </section>
+
+    <!--Contact Section-->
+    <div class="contact-container">
+      <h1>Contact Sibs and Stories</h1>
+      <div class="contact-info">
+        <h2>Quick Contact</h2>
+        <p><strong>Phone:</strong> <a href="tel:058973932">058973932</a></p>
+        <p><strong>Email:</strong> <a href="mailto:skvrvz@gmail.com">skvrvz@gmail.com</a></p>
+        <p class="note">We’d love to hear from you! Whether it’s a custom hamper request, partnership, or just a question—reach out anytime.</p>
+      </div>
+
+      <div class="contact-form">
+        <h2>Send Us a Message</h2>
+        <form>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="tel" name="phone" placeholder="Phone Number" />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
   </main>
 
+  <!--Footer section-->
   <footer>
     <p>&copy; 2025 Sibs and Stories. All rights reserved.</p>
   </footer>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>
-
-
