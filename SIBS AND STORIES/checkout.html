@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Checkout - Sibs and Stories</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
@@ -15,9 +15,8 @@
         <li><a href="products.html">Products</a></li>
         <li><a href="contact.html">Contact Us</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="login.html">Login/Signup</a></li>
         <li><a href="hampers.html">Hampers</a></li>
-        <li><a href="checkout.html">Checkout</a></li>
+        <li><a href="checkout.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
       </ul>
     </nav>
   </header>
@@ -25,14 +24,40 @@
   <main>
     <div class="checkout-container">
       <h1>Your Cart</h1>
-      <div id="cart-items"></div>
+      <div id="cart-items" class="cart-items"></div>
       <div class="total" id="cart-total">Total: $0.00</div>
-      <button class="place-order" onclick="placeOrder()">Place Order</button>
+
+      <h2>Shipping Information</h2>
+      <form id="checkout-form">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" required />
+
+        <label for="address">Address:</label>
+        <textarea id="address" required></textarea>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" required />
+
+        <label for="zip">ZIP / Postal Code:</label>
+        <input type="text" id="zip" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required />
+
+        <button type="submit" class="place-order">Place Order</button>
+      </form>
+
+      <div id="thank-you-message" style="display: none;">
+        <h2>Thank you for shopping with us!</h2>
+        <p>Your order has been placed successfully.</p>
+        <a href="index.html" class="cta-btn">Return to Home</a>
+      </div>
     </div>
   </main>
 
-  <footer><p>&copy; 2025 Sibs and Stories. All rights reserved.</p></footer>
+  <footer>
+    <p>&copy; 2025 Sibs and Stories. All rights reserved.</p>
+  </footer>
 
-  <script src="script.js"></script>
-</body>
+  <script src="script.js"
 </html>

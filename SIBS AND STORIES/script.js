@@ -1,45 +1,43 @@
-// Load cart 
-let cart = JSON.parse(localStorage.getItem('cart')) || [];
-updateCartCount();
+document.addEventListener("DOMContentLoaded", function () {
+  const cartCount = document.getElementById("cart-count");
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Add to cart on Buy Now
-document.querySelectorAll('.buy-btn').forEach(button => {
-  button.addEventListener('click', function (e) {
-    e.preventDefault();
-    const name = this.dataset.name;
-    const price = parseFloat(this.dataset.price);
+  function updateCartCount() {
+    const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+    if (cartCount) cartCount.textContent = total;
+  }
 
-    const existingItem = cart.find(item => item.name === name);
-    if (existingItem) {
-      existingItem.quantity += 1;
+  function addToCart(name, price) {
+    price = parseFloat(price);
+    const existing = cart.find(item => item.name === name);
+    if (existing) {
+      existing.quantity += 1;
     } else {
       cart.push({ name, price, quantity: 1 });
     }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
-    alert(`${name} added to your cart!`);
-  });
-});
-
-// Show cart contents
-document.getElementById('cart-link').addEventListener('click', function (e) {
-  e.preventDefault();
-  if (cart.length === 0) {
-    alert("Your cart is empty.");
-    return;
   }
 
-  let cartDetails = "Items in your cart:\n\n";
-  cart.forEach(item => {
-    cartDetails += `${item.name} - $${item.price} x ${item.quantity}\n`;
+  // Handle Buy Now buttons
+  const buyNowButtons = document.querySelectorAll(".buy-btn");
+  buyNowButtons.forEach(button => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const productCard = this.closest(".product-item");
+      const name = productCard.querySelector("h2").textContent.trim();
+      const priceText = productCard.querySelector(".price").textContent;
+      const price = priceText.replace(/[^0-9.]/g, "");
+
+      addToCart(name, price);
+
+      // Redirect to checkout after adding item
+      setTimeout(() => {
+        window.location.href = "checkout.html";
+      }, 100);
+    });
   });
 
-  alert(cartDetails);
+  updateCartCount();
 });
-
-// Update cart icon count
-function updateCartCount() {
-  document.getElementById('cart-count').textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
-}
-

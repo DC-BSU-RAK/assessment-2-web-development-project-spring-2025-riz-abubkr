@@ -6,6 +6,7 @@
   <title>Sibs and Stories - Home</title>
   <!--Linking with css and java-->
   <link rel="stylesheet" href="styles.css" />
+<script defer src="scripts.js"></script>
 </head>
 <!--Header section-->
 <body>
@@ -22,7 +23,7 @@
         <li><a href="about.html">About</a></li>
         <li><a href="login.html">Login/Signup</a></li>
         <li><a href="hampers.html">Hampers</a></li>
-        <li><a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+        <li><a href="checkout.html" id="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
       </ul>
     </nav>
   </header>
@@ -50,47 +51,55 @@
       <div class="product-item">
         <img src="Images/Buldak bouquet.jpg" alt="Flaming Hot Treats" />
         <h2>Flaming Hot Treats</h2>
-        <p> The Perfect Spicy Snack Bouquet!</p>
-        <a href="#" class="buy-btn" data-name="Flaming Hot Treats" data-price="19.99">Buy Now</a>
+        <p>The Perfect Spicy Snack Bouquet!</p>
+        <p class="price">$19.99</p>
+   <a href="checkout.html" class="buy-btn">Buy Now</a>
       </div>
 
       <div class="product-item">
         <img src="Images/Hamper box.jpg" alt="Personalized Hamper" />
         <h2>Personalized Hamper</h2>
         <p>Customize your gift with special items and a heartfelt message.</p>
-        <a href="#" class="buy-btn" data-name="Personalized Hamper" data-price="29.99">Buy Now</a>
+        <p class="price">$29.99</p>
+   <a href="checkout.html" class="buy-btn">Buy Now</a>
+
       </div>
 
       <div class="product-item">
         <img src="Images/Office flower.jpg" alt="Elegant Office Blooms" />
         <h2>Elegant Office Blooms</h2>
         <p>Fresh Floral Arrangements to Brighten Your Workspace</p>
-        <a href="#" class="buy-btn" data-name="Elegant Office Blooms" data-price="24.99">Buy Now</a>
+        <p class="price">$24.99</p>
+     <a href="checkout.html" class="buy-btn">Buy Now</a>
+
       </div>
 
       <div class="product-item">
         <img src="Images/Rose bouquet.jpg" alt="Flower bouquets" />
         <h2>Flower bouquets</h2>
-        <p> Graceful Bouquets for Your Loved Ones</p>
-        <a href="#" class="buy-btn" data-name="Flower Bouquets" data-price="14.99">Buy Now</a>
+        <p>Graceful Bouquets for Your Loved Ones</p>
+        <p class="price">$14.99</p>
+        <a href="checkout.html" class="buy-btn">Buy Now</a>
       </div>
 
       <div class="product-item">
         <img src="Images/birthday hampers.jpg" alt="Birthday hampers"/>
         <h2>Birthday hampers</h2>
-        <P> Premium Birthday Gift Hampers</P>
-        <a href="#" class="buy-btn" data-name="Birthday Hampers" data-price="34.99">Buy Now</a>
+        <p>Premium Birthday Gift Hampers</p>
+        <p class="price">$34.99</p>
       </div>
 
-      <div class ="product-item">
+      <div class="product-item">
         <img src="Images/Nuts hamper.jpg" alt="Nuts Hamper"/>
         <h2>Nuts Hamper</h2>
         <p>Healthy & Gourmet Gift Packs</p>
-        <a href="#" class="buy-btn" data-name="Nuts Hamper" data-price="22.99">Buy Now</a>
+        <p class="price">$22.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+
       </div>
     </div>
   </section>
-
+  <!--Hamper section-->
   <main class="hamper-info">
     <section class="hamper-intro">
       <h1>Why Choose Sibs and Stories for Your Gift Hampers?</h1>
@@ -133,7 +142,7 @@
       <div class="contact-info">
         <h2>Quick Contact</h2>
         <p><strong>Phone:</strong> <a href="tel:058973932">058973932</a></p>
-        <p><strong>Email:</strong> <a href="mailto:skvrvz@gmail.com">skvrvz@gmail.com</a></p>
+        <p><strong>Email:</strong> <a href="mailto:yktvriz@gmail.com">yktvriz@gmail.com</a></p>
         <p class="note">We’d love to hear from you! Whether it’s a custom hamper request, partnership, or just a question—reach out anytime.</p>
       </div>
 
@@ -154,8 +163,5 @@
   <footer>
     <p>&copy; 2025 Sibs and Stories. All rights reserved.</p>
   </footer>
-
-  <!-- Link to JavaScript file -->
-  <script src="script.js"></script>
 </body>
 </html>
